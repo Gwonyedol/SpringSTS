@@ -1,59 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
- 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- 	   xmlns:security="http://www.springframework.org/schema/security"
- 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
-  						   http://www.springframework.org/schema/beans/spring-beans.xsd
- 					 	   http://www.springframework.org/schema/security
-				    	   http://www.springframework.org/schema/security/spring-security.xsd">
-
-
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                     http://www.springframework.org/schema/beans/spring-beans.xsd
+                     http://www.springframework.org/schema/security 
+                     http://www.springframework.org/schema/security/spring-security.xsd">
 <!-- 
-1단계:인증과 권한 기본설정(in-memory)방식으로 사용자 만들고 권한 설정
-auto-config="true" 나는 네가 가지고 있는 설정을 그대로 사용할게!
-(인증과 권한에 관련된 처리를 자동화 UI(로그인페이지),Controller 기능)
-
+1단계 : 인증과 권한 기본설정 (in -memory) 방식으로 사용자 만들고 권한 설정
+auto-config="true" 나는 니가 가지고 있는 설정을 그대로 사용할게
+인증과 권한에 관련된 처리를 자동화 (UI(로그인 페이지), Controller 기능)
+로그인 처리 자동화 ... ID, PWD 검증 하고 처리...
 <security:http auto-config="true">
-	<security:csrf disabled="true"/>
-	<security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/>
-	<security:intercept-url pattern="/customer/noticeReg.htm" access="hasRole('ROLE_ADMIN')"/>
+    <security:csrf disabled="true"/>
+    <security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/>
+    <security:intercept-url pattern="/customer/noticeReg.htm" access="hasRole('ROLE_ADMIN')"/>
 </security:http>
 <security:authentication-manager>
-	<security:authentication-provider>
-		<security:user-service>
-			<security:user name="kglim" password="1004" authorities="ROLE_USER"/>
-			<security:user name="admin" password="1004" authorities="ROLE_ADMIN, ROLE_USER"/>
-		</security:user-service>
-	</security:authentication-provider>
-</security:authentication-manager>
-
+    <security:authentication-provider>
+        <security:user-service>
+            <security:user name="kglim" password="1004" authorities="ROLE_USER"/>
+            <security:user name="admin" password="1004" authorities="ROLE_ADMIN, ROLE_USER"/>
+        </security:user-service>
+    </security:authentication-provider>
+</security:authentication-manager>  
+-->
+<!-- 
+2단계
+1단계 로그인 처리 자동화 ... /login 처리 ...
+                     /logout 처리 ...
+사용자가 /login (id, pwd DB연결 인증확인, 권한처리 session), /logout 직접 처리 
  -->
- 
- <!-- 
- 2단계 
- 1단계 로그인 처리 자동화 .. /login 처리 ...
-   					 /logout 처리...
- 
- 사용자가 	/login	,/logout 직접 처리
- -->
-
+<!--
 <security:http>
-	<security:csrf disabled="true"/>
-	<security:form-login login-page="/joinus/login.htm" 
-	authentication-failure-url="/joinus/login.htm?error"/>
-	<security:logout logout-success-url="/index.htm"/>
-	<security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/>
-	<security:intercept-url pattern="/customer/noticeReg.htm" access="hasRole('ROLE_ADMIN')"/>
+    <security:csrf disabled="true"/>
+    <security:form-login login-page="/joinus/login.htm" 
+                         authentication-failure-url="/joinus/login.htm?error"/>
+    <security:logout logout-success-url="/index.htm" />
+    <security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/>
+    <security:intercept-url pattern="/customer/noticeReg.htm" access="hasRole('ROLE_ADMIN')"/>
 </security:http>
  <security:authentication-manager>
-	<security:authentication-provider>
-		<security:user-service>
-			<security:user name="kglim" password="1004" authorities="ROLE_USER"/>
-			<security:user name="admin" password="1004" authorities="ROLE_ADMIN, ROLE_USER"/>
-		</security:user-service>
-	</security:authentication-provider>
+    <security:authentication-provider>
+        <security:user-service>
+            <security:user name="kglim" password="1004" authorities="ROLE_USER"/>
+            <security:user name="admin" password="1004" authorities="ROLE_ADMIN, ROLE_USER"/>
+        </security:user-service>
+    </security:authentication-provider>
+</security:authentication-manager> 
+-->
+<security:http>
+    <security:csrf disabled="true"/>
+    <security:form-login login-page="/joinus/login.htm" 
+                         authentication-failure-url="/joinus/login.htm?error"/>
+    <security:logout logout-success-url="/index.htm" />
+    <security:intercept-url pattern="/customer/*Reg.htm" access="hasRole('ROLE_USER')"/>
+    <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+</security:http>
+<security:authentication-manager>
+    <security:authentication-provider>
+          <security:jdbc-user-service 
+          data-source-ref="driverManagerDataSource"
+          users-by-username-query="SELECT USERID, pwd AS PASSWORD, 1 enabled FROM member where userid=?" 
+          authorities-by-username-query="select m.USERID , r.ROLE_NAME  
+          from member m join roll r 
+          on m.userid = r.userid 
+          where m.userid=?" />
+    </security:authentication-provider>
 </security:authentication-manager>
-
- 
-
+  
+  
+  
 </beans>

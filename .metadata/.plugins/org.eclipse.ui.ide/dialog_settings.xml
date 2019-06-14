@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic04_WebSite_Mybatis_Security_password"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic_Ajax_03_Error_Handler"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic_Ajax_02"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic_Ajax_01"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\spring_security_Basic06_handler"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\spring_security_Basic04_password"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\spring_security_Basic05_Annotation"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\spring_security_Basic03"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\spring_security_Basic02"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\spring_security_Basic01"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic02_Sts_Mybatis_Transaction"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\Emp_Spring_BootStrap_Tiles_Mybatis_2Team"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\Team2_MiniPJ_EMP"/>
 		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic01_Sts_Mybatis"/>
 		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\Mybatis_Web_SpringBoard_07"/>
 		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\Mybatis_Web_Mvc_06"/>

@@ -2,17 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="join-form" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="data"/>
-			<item value="insert"/>
-			<item value="javax"/>
-			<item value="servlet"/>
-			<item value="8090"/>
+			<item value="join-form"/>
+			<item value="cont"/>
+			<item value="확인"/>
+			<item value="마이"/>
+			<item value="마이페이지"/>
+			<item value="tx"/>
+			<item value="se"/>
+			<item value="secu"/>
+			<item value="dispatcher"/>
+			<item value="dispatcher-ser"/>
+			<item value="tile"/>
+			<item value="tile&apos;"/>
+			<item value="contextConfigLocation"/>
+			<item value="oracle"/>
+			<item value="버전관리"/>
 		</list>
 		<list key="replacehistory">
 		</list>

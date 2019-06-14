@@ -132,7 +132,7 @@ public int insert(Notice n) throws ClassNotFoundException, SQLException;
 	  		SELECT MAX(TO_NUMBER(SEQ))+1 FROM NOTICES
 	  </selectKey>
 	  INSERT INTO NOTICES(SEQ, TITLE, CONTENT, WRITER, REGDATE, HIT, FILESRC , FILESRC2) 
-	  VALUES(#{seq}, #{title}, #{content}, 'bituser', SYSDATE, 0, #{fileSrc,jdbcType=VARCHAR}, #{fileSrc2,jdbcType=VARCHAR})
+	  VALUES(#{seq}, #{title}, #{content}, #{writer}, SYSDATE, 0, #{fileSrc,jdbcType=VARCHAR}, #{fileSrc2,jdbcType=VARCHAR})
 	  </insert>
 	  
 	  
