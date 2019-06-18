@@ -46,7 +46,7 @@ public class Ex05_TCP_Multi_Chatt_Client extends JFrame implements ActionListene
 		
 		//소켓 설정하기
 		try {
-			 Socket socket = new Socket("192.168.0.24", 9999);
+			 Socket socket = new Socket("192.168.1.10", 9999);
 			 in = new DataInputStream(socket.getInputStream());
 			 out = new DataOutputStream(socket.getOutputStream());
 			 //서버와 연결

@@ -33,6 +33,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\chat3"/>
 			<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\sp5-chap02"/>
 		</list>
 		<list key="projectNameTemplate">

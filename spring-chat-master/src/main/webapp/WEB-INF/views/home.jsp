@@ -38,20 +38,26 @@
 				else{				
 					sock.send("<b>"+$("#name").val()+"</b> : "+$("#message").val());
 					$("#message").val('').focus();
+					//sock.send는 웹소켓으로 메세지를 전달해준다
 				}
 
 			});
 		});
-	
+		
+		//WebSocket을 지정한 URL로 가서 연결한다
+		//서버랑 연결하고 echohandler가서 출력한다
 		var sock = new SockJS("/echo");
 		
+		
+		//sock 서버가 켜지면 뜨는 메세지
 		sock.onopen = function(){
 			$("#chat").append("<center>채팅방 입장 성공</center> <br>");
 		}
 		
 		sock.onmessage = function(e){
 			$("#chat").append(e.data + "<br>");
-			$("#chat").scrollTop($("#chat")[0].scrollHeight); 
+			$("#chat").scrollTop($("#chat")[0].scrollHeight);  //채팅글이 많아져서
+			//스크롤이 생기면 자동으로 내려주는 메소드
 		}
 		
 		sock.onclose = function(){

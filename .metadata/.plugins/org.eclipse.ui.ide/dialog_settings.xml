@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\chat3"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\104_3Team_Spring_WebSocket"/>
+		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\104_1Team_Spring_Websocket"/>
 		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic04_WebSite_Mybatis_Security_password"/>
 		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic_Ajax_03_Error_Handler"/>
 		<item value="C:\FrontAndBackAnd\Spring\Spring_Labs_STS\SpringMVC_Basic_Ajax_02"/>

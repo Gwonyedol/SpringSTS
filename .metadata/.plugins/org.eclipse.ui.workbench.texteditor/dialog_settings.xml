@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="join-form" key="selection"/>
+		<item value="8080" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="8080"/>
+			<item value="webso"/>
+			<item value="web"/>
+			<item value="root"/>
+			<item value="spring"/>
 			<item value="join-form"/>
 			<item value="cont"/>
 			<item value="확인"/>
@@ -18,11 +23,6 @@
 			<item value="secu"/>
 			<item value="dispatcher"/>
 			<item value="dispatcher-ser"/>
-			<item value="tile"/>
-			<item value="tile&apos;"/>
-			<item value="contextConfigLocation"/>
-			<item value="oracle"/>
-			<item value="버전관리"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -31,7 +31,7 @@
 		<item value="393" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="523" key="DIALOG_HEIGHT"/>
-		<item value="1015" key="DIALOG_X_ORIGIN"/>
+		<item value="818" key="DIALOG_X_ORIGIN"/>
 		<item value="338" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
