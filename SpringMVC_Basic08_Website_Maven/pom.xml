@@ -9,9 +9,7 @@
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<!-- 의존 관리 편리성 (버전관리) -->
   <properties>
-  		<org.springframework-version>
-  			4.2.5.RELEASE
-  		</org.springframework-version>
+  		<org.springframework-version>5.3.19</org.springframework-version>
   		<db-version>
   			11
   		</db-version>
